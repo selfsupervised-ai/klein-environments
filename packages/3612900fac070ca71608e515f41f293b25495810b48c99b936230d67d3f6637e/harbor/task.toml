@@ -1,0 +1,34 @@
+schema_version = "1.4"
+artifacts = []
+source = 'klein-harbor-origin:{"original_image":"ghcr.io/selfsupervised-ai/ubuntu:24.04@sha256:a853f94d226358a79c740cfc7bce0c289748f3fe3488d921d038ccd752c61b60","source":"https://github.com/selfsupervised-ai/klein-rs/tree/main/testdata/environments/native-parser"}'
+
+[task]
+name = "fix-parser-bug"
+description = ""
+keywords = []
+authors = []
+
+[metadata]
+
+[verifier]
+timeout_sec = 900.0
+environment_mode = "separate"
+
+[verifier.env]
+
+[agent]
+timeout_sec = 900.0
+
+[environment]
+build_timeout_sec = 600.0
+docker_image = "ghcr.io/selfsupervised-ai/ubuntu:24.04@sha256:a853f94d226358a79c740cfc7bce0c289748f3fe3488d921d038ccd752c61b60"
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240
+gpus = 0
+network_mode = "no-network"
+mcp_servers = []
+
+[environment.env]
+
+[solution.env]
